@@ -1,0 +1,102 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111827;
+    background-image: radial-gradient(circle at top right, rgba(128, 90, 213, 0.15), transparent 50%),
+                      radial-gradient(circle at bottom left, rgba(79, 70, 229, 0.15), transparent 60%);
+}
+.main-container {
+    transition: all 0.5s ease-in-out;
+}
+.drop-zone {
+    border: 2px dashed #4b5563;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.drop-zone.drag-over {
+    background-color: #374151;
+    border-color: #6366f1;
+}
+.spinner {
+    border-top-color: #6366f1;
+    animation: spin 1s linear infinite;
+}
+.gradient-text {
+    background: linear-gradient(to right, #818cf8, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* Scrollbar styles */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #1f2937;
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+}
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.star-btn svg {
+    transition: all 0.2s ease-in-out;
+}
+.star-btn.starred svg {
+    fill: #facc15;
+    stroke: #facc15;
+    transform: scale(1.1);
+}
+#suggestions-carousel {
+    scroll-behavior: smooth;
+}
+.song-page {
+    flex: 0 0 100%;
+    width: 100%;
+    scroll-snap-align: start;
+}
+.pagination-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #4b5563;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.pagination-dot.active {
+    background-color: #818cf8;
+    transform: scale(1.25);
+}
+.resuggest-btn:not(:disabled) {
+    transition: transform 0.1s ease-in-out, background-color 0.3s;
+}
+.resuggest-btn.clicked {
+    transform: scale(0.98);
+}
+/* Vibe & Era Button Styles */
+.vibe-btn, .era-btn {
+    transition: all 0.2s ease-in-out;
+}
+.vibe-btn {
+     border: 1px solid #4b5563;
+}
+.vibe-btn.selected, .era-btn.selected {
+    background-color: #6366f1;
+    color: white;
+    box-shadow: 0 2px 5px rgba(99, 102, 241, 0.3);
+}
+.vibe-btn.selected {
+     border-color: #6366f1;
+     transform: translateY(-2px);
+}

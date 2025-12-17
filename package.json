@@ -1,0 +1,11 @@
+{
+  "name": "musical-muse",
+  "version": "1.0.0",
+  "description": "AI-powered song suggestions based on images",
+  "scripts": {
+    "start": "node api/suggest.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1"
+  }
+}
